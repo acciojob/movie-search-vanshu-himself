@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import 'regenerator-runtime/runtime';
 import axios from "axios";
+import '../styles/App.css'
 
 // const SearchBar = () => {
 //   const [query, setQuery] = useState("");
@@ -85,7 +86,7 @@ function handleSubmit(e){
                 <button type="submit">Search</button>
             </form>
             <ul>
-        {!movie? <div>Invalid movie name. Please try again.</div>:
+        {!movie? <div className="error">Invalid movie name. Please try again.</div>:
         movie.map((mov)=>{
             return(
                 <li>
